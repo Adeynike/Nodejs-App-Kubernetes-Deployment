@@ -1,0 +1,10 @@
+#Uisng AF3r7P5dWxL8MxyITRMlORQNaOA2IkAFaTr4k7BUumjPtRpGDTZpl0Pb1XCO6JeDCBdp126Cgs9sMxqSjgYyRg
+minikube start --driver=docker
+
+kubectl apply -f deployment.yaml
+
+kubectl apply -f deployment-service.yaml
+
+kubectl get pods
+
+kubectl get service

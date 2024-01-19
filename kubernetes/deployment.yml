@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: random-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: random-api
+  template:
+    metadata:
+      labels:
+        app: random-api
+    spec:
+      containers:
+      - name: react-app
+        image: public.ecr.aws/c2m9p1a4/react-app
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
+        ports:
+          - containerPort: 80
